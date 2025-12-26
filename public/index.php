@@ -18,18 +18,15 @@ $calculator = $container->instance(CalculatorInterface::class);
 
 $console->writeLine('=== PHP Console - Calculator ===');
 
-$loop = true;
 do {
-
     $term = $console->readLine('Bitte gib deine Term jetzt ein: ');
 
     try {
         $result = $calculator->calculate($term);
+        $console->writeLine("Ergebnis: $result");
     } catch (Exception $e) {
         $console->writeLine('Der Term konnte leider nicht berechnet werden.');
     }
-
-    $console->writeLine("Ergebnis: $result");
 
     $loop = $console->readYesNo('Möchtest du einen weiteren Term berechnen?');
 
