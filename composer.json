@@ -1,0 +1,14 @@
+{
+  "name": "prj26/calculator",
+  "description": "Mini PHP Projekt - Calculator",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": "^8.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Calculator\\": "src/"
+    }
+  }
+}
